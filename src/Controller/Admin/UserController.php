@@ -11,10 +11,10 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-#[Route('/admin/users')]
+#[Route('/admin')]
 class UserController extends AbstractController
 {
-    #[Route('/', name: 'app_admin_user_index', methods: ['GET'])]
+    #[Route('/users', name: 'app_admin_index_user', methods: ['GET'])]
     public function index(UserRepository $userRepository): Response
     {
         /*$users = $userRepository->findBy(
